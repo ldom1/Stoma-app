@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'bootstrap4',
+    'home',
+    'fournisseur',
+    'users',
     'django_filters',
     'whitenoise',
     'whitenoise.runserver_nostatic',
@@ -71,7 +74,7 @@ MIDDLEWARE = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-ALLOWED_HOSTS =  ['scrimmo.herokuapp.com']
+ALLOWED_HOSTS =  ['haccp.herokuapp.com']
 
 STATIC_URL = '/static/'
 

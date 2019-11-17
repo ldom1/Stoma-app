@@ -1,1 +1,1 @@
-web: gunicorn scrimmo.wsgi
+web: gunicorn haccp.wsgi
