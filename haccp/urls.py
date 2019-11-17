@@ -31,3 +31,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('', include('fournisseur.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
