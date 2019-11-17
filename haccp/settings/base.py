@@ -140,7 +140,7 @@ LOGIN_REDIRECT_URL = '/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-ALLOWED_HOSTS =  ['0.0.0.0', '127.0.0.1', 'haccp.herokuapp.com']
+ALLOWED_HOSTS =  ['0.0.0.0', '127.0.0.1', 'stoma-app.herokuapp.com']
 
 STATIC_URL = '/static/'
 
