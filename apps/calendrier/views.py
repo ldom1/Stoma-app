@@ -8,8 +8,8 @@ import calendar
 from datetime import datetime, date, timedelta
 
 from .models import *
-from .utils import Calendar
-from .forms import EventForm
+from .utils import *
+from .forms import *
 
 
 class CalendarView(generic.ListView):
