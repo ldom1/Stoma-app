@@ -30,6 +30,7 @@ urlpatterns = [
     path('profile/', profile, name='profile'),
     path('', include('home.urls')),
     path('', include('fournisseur.urls')),
+    path('', include('calendrier.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

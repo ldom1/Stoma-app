@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'home',
     'fournisseur',
     'users',
+    'calendrier',
     'django_filters',
     'whitenoise',
     'whitenoise.runserver_nostatic',

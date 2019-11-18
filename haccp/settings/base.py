@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'fournisseur',
     'users',
+    'calendrier',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

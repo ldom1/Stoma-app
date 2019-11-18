@@ -19,26 +19,19 @@
 <div class="sidebar-sticky">
 <ul class="nav flex-column">
 <li class="nav-item">
-<a class="nav-link active" href="{% url 'home' %}">
+<a class="nav-link" href="{% url 'home' %}">
 <span data-feather="home"></span>
               Home <span class="sr-only">(current)</span>
 </a>
 </li>
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'display_fournisseur' %}" role="button" aria-haspopup="true" aria-expanded="false">
-    <span data-feather="shopping-cart"></span>
+<li class="nav-item">
+<a class="nav-link active" href="{% url 'display_fournisseur' %}">
+<span data-feather="shopping-cart"></span>
               Fournisseur
-        </a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href=""> <span data-feather="activity"></span> Insights</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="" ><span data-feather="bar-chart-2"></span> Estimations</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="" ><span data-feather="clipboard"></span> Listing</a>
-    </div>
+            </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#">
+<a class="nav-link" href="{% url 'calendrier' %}">
 <span data-feather="shopping-cart"></span>
               Calendrier
             </a>
