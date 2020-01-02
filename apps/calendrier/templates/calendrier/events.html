@@ -1,10 +1,59 @@
-{% extends 'home/base.html' %}
-
-{% block title %}
-Event
-{% endblock %}
-
+{% extends "home/base.html" %}
+{% load static %}
 {% block content %}
+{% load crispy_forms_tags %} 
+<body>
+<div class="upper-navbar">
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'home' %}">Stoma</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="{% url 'logout' %}">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="container-fluid">
+<div class="row">
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+<div class="sidebar-sticky">
+<ul class="nav flex-column">
+<li class="nav-item">
+<a class="nav-link" href="{% url 'home' %}">
+<span data-feather="home"></span>
+              Home <span class="sr-only">(current)</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'display_fournisseur' %}">
+<span data-feather="shopping-cart"></span>
+              Fournisseur
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'display_collaborateur' %}">
+<span data-feather="shopping-cart"></span>
+              Collaborateur
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="{% url 'calendrier' %}">
+<span data-feather="shopping-cart"></span>
+              Calendrier
+            </a>
+</li>
+<hr/>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'profile' %}">
+<span data-feather="users"></span>
+              Profil
+</a>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
 <div class="clearfix">
   <a class="btn btn-info left" href="{% url 'calendrier' %}"> Calendrier </a>
 </div>
@@ -31,4 +80,11 @@ Event
     <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Submit </button></td></tr>
   </table>
 </form>
-{% endblock %}
+
+
+</main>
+</div>
+</div>
+</body>
+
+{% endblock content %}
