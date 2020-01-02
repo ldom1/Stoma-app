@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'home',
     'fournisseur',
+    'collaborateurs',
     'users',
     'calendrier',
 ]

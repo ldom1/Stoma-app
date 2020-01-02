@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'django_filters',
     'whitenoise',
     'whitenoise.runserver_nostatic',
+    'collaborateurs',
 ]
 
 MIDDLEWARE = [

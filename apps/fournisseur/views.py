@@ -42,7 +42,6 @@ class view_register_fournisseur(TemplateView):
 
     def post(self, request):
     	context = {}
-    	test = False
     	form = fournisseurForm(request.POST)
 
     	if form.is_valid():
@@ -71,5 +70,4 @@ class view_register_fournisseur(TemplateView):
     							user_username = request.user.get_username())
     	# context
     	context['form'] = form
-    	context['test'] = test
     	return render(request, self.template_name, context)
