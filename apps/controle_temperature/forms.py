@@ -4,7 +4,7 @@ from django.apps import apps
 
 class ControleTemperatureForm(forms.Form):
 
-    collaborateurs = apps.get_model('collaborateurs', 'Collaborateur').objects.all()
+    '''collaborateurs = apps.get_model('collaborateurs', 'Collaborateur').objects.all()
     appareil = apps.get_model('appareil', 'Appareil').objects.all()
 
     choices_first_name_collaborateur = [[1, 'Choose...']] + [[y.first_name, y.first_name] for y in collaborateurs]
@@ -19,4 +19,4 @@ class ControleTemperatureForm(forms.Form):
     location_appareil = forms.ChoiceField(choices=choices_appareil_location, required=True)
     temperature = forms.FloatField(required=True)
     periode_releve = forms.ChoiceField(choices=choices_reception_period, required=True)
-    description = forms.CharField(required=False)
+    description = forms.CharField(required=False)'''

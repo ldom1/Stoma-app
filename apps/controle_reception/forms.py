@@ -4,7 +4,7 @@ from django.apps import apps
 
 class ControleReceptionForm(forms.Form):
 
-    collaborateurs = apps.get_model('collaborateurs', 'Collaborateur').objects.all()
+    '''collaborateurs = apps.get_model('collaborateurs', 'Collaborateur').objects.all()
     fournisseurs = apps.get_model('fournisseur', 'Fournisseur').objects.all()
 
     choices_first_name_collaborateur = [[1, 'Choose...']] + [[y.first_name, y.first_name] for y in collaborateurs]
@@ -18,4 +18,4 @@ class ControleReceptionForm(forms.Form):
     type_nourriture = forms.CharField(required=True)
     temperature = forms.FloatField(required=True)
     reception_period = forms.ChoiceField(choices=choices_reception_period, required=True)
-    description = forms.CharField(required=False)
+    description = forms.CharField(required=False)'''
