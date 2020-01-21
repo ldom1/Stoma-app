@@ -1,0 +1,103 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+<body>
+<div class="upper-navbar">
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'home' %}">Stoma</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="{% url 'logout' %}">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="container-fluid">
+<div class="row">
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+<div class="sidebar-sticky">
+<ul class="nav flex-column">
+<li class="nav-item">
+<a class="nav-link" href="{% url 'display_fournisseur' %}">
+<span data-feather="shopping-cart"></span>
+              Fournisseur
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'display_collaborateur' %}">
+<span data-feather="shopping-cart"></span>
+              Collaborateur
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'calendrier' %}">
+<span data-feather="shopping-cart"></span>
+              Calendrier
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'display_appareil' %}">
+<span data-feather="shopping-cart"></span>
+              Appareil
+            </a>
+</li>
+<hr/>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'home' %}">
+<span data-feather="home"></span>
+              Home
+</a>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<h1 class="h2">Admin</h1>
+<div class="btn-toolbar mb-2 mb-md-0">
+<div class="btn-group mr-2">
+<button class="btn btn-sm btn-outline-secondary" type="button">Share</button>
+</div>
+<button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button">
+<span data-feather="calendar"></span>
+            This week
+          </button>
+</div>
+</div>
+<!-- ./HEADER -->
+    <div class="container my-5">
+        <div class="row">
+            <div id="fournisseur" class="col-3">
+                <a href="{% url 'display_fournisseur' %}">
+                    <img src='{% static "home/food_suppliers.png" %}' class="img-fluid img-first"/>
+                </a>
+                <h5>Fournisseurs</h5>
+            </div>
+            <div id="calendrier" class="col-3">
+                <a href="{% url 'calendrier' %}">
+                    <img src='{% static "home/calendrier.jpg" %}' class="img-fluid img-first"/>
+                </a>
+                <h5>Calendrier</h5>
+            </div>
+            <div id="collaborateur" class="col-3">
+                <a href="{% url 'display_collaborateur' %}">
+                    <img src='{% static "home/collaborateur.png" %}' class="img-fluid img-first"/>
+                </a>
+                <h5>Collaborateur</h5>
+            </div>
+            <div id="appareil" class="col-3">
+                <a href="{% url 'display_appareil' %}">
+                    <img src='{% static "home/appareil.jpeg" %}' class="img-fluid img-first"/>
+                </a>
+                <h5>Appareil</h5>
+            </div>
+        </div>
+        </div>
+    </div>
+</main>
+</div>
+</div>
+</body>
+
+{% endblock content %}

@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'home',
     'fournisseur',
     'collaborateurs',
+    'appareil',
+    'controle_reception',
+    'controle_temperature',
     'users',
     'calendrier',
 ]

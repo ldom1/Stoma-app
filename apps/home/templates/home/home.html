@@ -25,28 +25,22 @@
 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{% url 'display_fournisseur' %}">
+<a class="nav-link" href="{% url 'register_controle_reception' %}">
 <span data-feather="shopping-cart"></span>
-              Fournisseur
+              Contrôle des receptions
             </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{% url 'display_collaborateur' %}">
+<a class="nav-link" href="{% url 'register_controle_temperature' %}">
 <span data-feather="shopping-cart"></span>
-              Collaborateur
-            </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="{% url 'calendrier' %}">
-<span data-feather="shopping-cart"></span>
-              Calendrier
+              Contrôle des températures
             </a>
 </li>
 <hr/>
 <li class="nav-item">
-<a class="nav-link" href="{% url 'profile' %}">
+<a class="nav-link" href="{% url 'admin' %}">
 <span data-feather="users"></span>
-              Profil
+              Admin
 </a>
 </ul>
 </div>
@@ -69,23 +63,15 @@
 <!-- ./HEADER -->
     <div class="container my-5">
         <div class="row">
-            <div id="fournisseur" class="col-3">
-                <a href="{% url 'display_fournisseur' %}">
-                    <img src='{% static "home/food_suppliers.png" %}' class="img-fluid img-first"/>
+            <div id="receptions" class="col-3">
+                <a href="{% url 'register_controle_reception' %}">
+                    <img src='{% static "home/controle_reception.png" %}' class="img-fluid img-first" width="60%" height="60%" />
                 </a>
-                <h5>Fournisseurs</h5>
             </div>
-            <div id="calendrier" class="col-3">
-                <a href="{% url 'calendrier' %}">
-                    <img src='{% static "home/calendrier.jpg" %}' class="img-fluid img-first"/>
+            <div id="temperatures" class="col-3">
+                <a href="{% url 'register_controle_temperature' %}">
+                    <img src='{% static "home/controle_temperature.png" %}' class="img-fluid img-first" width="60%" height="60%" />
                 </a>
-                <h5>Calendrier</h5>
-            </div>
-            <div id="collaborateur" class="col-3">
-                <a href="{% url 'display_collaborateur' %}">
-                    <img src='{% static "home/collaborateur.png" %}' class="img-fluid img-first"/>
-                </a>
-                <h5>Collaborateur</h5>
             </div>
         </div>
         </div>

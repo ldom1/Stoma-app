@@ -32,6 +32,9 @@ urlpatterns = [
     path('', include('fournisseur.urls')),
     path('', include('calendrier.urls')),
     path('', include('collaborateurs.urls')),
+    path('', include('appareil.urls')),
+    path('', include('controle_reception.urls')),
+    path('', include('controle_temperature.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
