@@ -39,7 +39,7 @@ class view_register_controle_temperature(TemplateView):
 	    	description = form.cleaned_data['description']
 
 	    	# Get the id
-	    	'''controle_temperature = ControleTemperature.objects.filter(user_username=request.user.get_username())
+	    	controle_temperature = ControleTemperature.objects.filter(user_username=request.user.get_username())
 	    	id_collaborateur = apps.get_model('collaborateurs', 'Collaborateur').objects.filter(user_username=request.user.get_username(),
 																							   first_name = first_name_collaborateur,
 																							   last_name = last_name_collaborateur,)[0].id_collaborateur
@@ -63,7 +63,7 @@ class view_register_controle_temperature(TemplateView):
 						            	temperature = temperature,
 						            	periode_releve = periode_releve,
 		    							description = description,
-		    							user_username = request.user.get_username())'''
+		    							user_username = request.user.get_username())
 
     	# context
     	context['form'] = form

@@ -39,7 +39,7 @@ class view_register_controle_reception(TemplateView):
 	    	description = form.cleaned_data['description']
 
 	    	# Get the id
-	    	'''controle_reception = ControleReception.objects.filter(user_username=request.user.get_username())
+	    	controle_reception = ControleReception.objects.filter(user_username=request.user.get_username())
 	    	id_collaborateur = apps.get_model('collaborateurs', 'Collaborateur').objects.filter(user_username=request.user.get_username(),
 																							   first_name = first_name_collaborateur,
 																							   last_name = last_name_collaborateur,)[0].id_collaborateur
@@ -62,7 +62,7 @@ class view_register_controle_reception(TemplateView):
 						            	periode_reception = reception_period,
 						            	type_nourriture = type_nourriture,
 		    							description = description,
-		    							user_username = request.user.get_username())'''
+		    							user_username = request.user.get_username())
 
     	# context
     	context['form'] = form
