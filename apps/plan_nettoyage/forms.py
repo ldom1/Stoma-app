@@ -12,7 +12,7 @@ class PlanNettoyageForm(ModelForm):
 
     piece = apps.get_model('piece', 'Piece').objects.all()
     collaborateurs = apps.get_model('collaborateurs', 'Collaborateur').objects.all()
-    piece = apps.get_model('piece', 'Piece').objects.all()
+    '''piece = apps.get_model('piece', 'Piece').objects.all()
 
     choices_first_name_collaborateur = [[1, 'Choose...']] + [[y.first_name, y.first_name] for y in collaborateurs]
     choices_last_name_collaborateur = [[1, 'Choose...']] + [[y.last_name, y.last_name] for y in collaborateurs]
@@ -34,4 +34,4 @@ class PlanNettoyageForm(ModelForm):
     
     # input_formats parses HTML5 datetime-local input to datetime field
     self.fields['start_time'].input_formats = ('%Y-%m-%dT%H:%M',)
-    self.fields['end_time'].input_formats = ('%Y-%m-%dT%H:%M',)
+    self.fields['end_time'].input_formats = ('%Y-%m-%dT%H:%M',)'''
