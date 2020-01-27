@@ -62,7 +62,7 @@ def event(request, event_id=None):
     	end_time = form.cleaned_data['end_time']
     	first_name_collaborateur = form.cleaned_data['first_name_collaborateur']
     	last_name_collaborateur = form.cleaned_data['last_name_collaborateur']
-    	#piece = form.cleaned_data['piece']
+    	piece = form.cleaned_data['piece']
     	description = form.cleaned_data['description']
 
     	# Get the id
