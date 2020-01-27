@@ -1,0 +1,90 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %} 
+<body>
+<div class="upper-navbar">
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'home' %}">Stoma</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="{% url 'logout' %}">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="container-fluid">
+<div class="row">
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+<div class="sidebar-sticky">
+<ul class="nav flex-column">
+<li class="nav-item">
+<a class="nav-link" href="{% url 'home' %}">
+<span data-feather="home"></span>
+              Home <span class="sr-only">(current)</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'register_controle_reception' %}">
+<span data-feather="shopping-cart"></span>
+              Contrôle des receptions
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'register_controle_temperature' %}">
+<span data-feather="shopping-cart"></span>
+              Contrôle des températures
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="{% url 'calendrier_plan_nettoyage' %}">
+<span data-feather="shopping-cart"></span>
+              Plan de nettoyage
+            </a>
+</li>
+<hr/>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'admin' %}">
+<span data-feather="users"></span>
+              Admin
+</a>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<main class="col-md-9 ml-sm-auto col-lg-10 px-4" role="main">
+<div class="clearfix">
+  <a class="btn btn-info left" href="{% url 'calendrier_plan_nettoyage' %}"> Plan Nettoyage </a>
+</div>
+
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                {{ field.label }} <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ field.label }} <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<form method="post">
+  {% csrf_token %}
+  <table class="form form-table">
+    {{ form }}
+    <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Submit </button></td></tr>
+  </table>
+</form>
+
+
+</main>
+</div>
+</div>
+</body>
+
+{% endblock content %}

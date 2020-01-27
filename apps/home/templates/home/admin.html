@@ -30,23 +30,30 @@
             </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{% url 'calendrier' %}">
-<span data-feather="shopping-cart"></span>
-              Calendrier
-            </a>
-</li>
-<li class="nav-item">
 <a class="nav-link" href="{% url 'display_appareil' %}">
 <span data-feather="shopping-cart"></span>
               Appareil
             </a>
 </li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'display_piece' %}">
+<span data-feather="shopping-cart"></span>
+              Piece
+            </a>
+</li>
 <hr/>
+<li class="nav-item">
+<a class="nav-link active" href="{% url 'admin' %}">
+<span data-feather="users"></span>
+              Admin
+</a>
+</li>
 <li class="nav-item">
 <a class="nav-link" href="{% url 'home' %}">
 <span data-feather="home"></span>
-              Home
+              Home <span class="sr-only">(current)</span>
 </a>
+</li>
 </ul>
 </div>
 </nav>

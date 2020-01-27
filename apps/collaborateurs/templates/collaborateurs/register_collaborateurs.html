@@ -19,12 +19,6 @@
 <div class="sidebar-sticky">
 <ul class="nav flex-column">
 <li class="nav-item">
-<a class="nav-link" href="{% url 'home' %}">
-<span data-feather="home"></span>
-              Home <span class="sr-only">(current)</span>
-</a>
-</li>
-<li class="nav-item">
 <a class="nav-link" href="{% url 'display_fournisseur' %}">
 <span data-feather="shopping-cart"></span>
               Fournisseur
@@ -37,15 +31,15 @@
             </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{% url 'calendrier' %}">
-<span data-feather="shopping-cart"></span>
-              Calendrier
-            </a>
-</li>
-<li class="nav-item">
 <a class="nav-link" href="{% url 'display_appareil' %}">
 <span data-feather="shopping-cart"></span>
               Appareil
+            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'display_piece' %}">
+<span data-feather="shopping-cart"></span>
+              Piece
             </a>
 </li>
 <hr/>
@@ -54,6 +48,13 @@
 <span data-feather="users"></span>
               Admin
 </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'home' %}">
+<span data-feather="home"></span>
+              Home <span class="sr-only">(current)</span>
+</a>
+</li>
 </ul>
 </div>
 </nav>

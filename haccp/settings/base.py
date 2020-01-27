@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'controle_reception',
     'controle_temperature',
     'users',
-    'calendrier',
+    'plan_nettoyage',
+    'piece',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
